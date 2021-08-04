@@ -10,25 +10,31 @@ body {
 
 .wrapper{
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-between;
    align-items: center;
    flex-wrap: wrap;
-   height: 100vh;
+   /*height: 100vh;*/
    max-width: 1000px;
+   margin: auto;
+   /*background-color: grey;*/
 }
 .header{
-   width: 1000px;
+   width: 100%;
    /*display: inline-block;*/
    justify-content: center;
    align-items: center;
    text-align: center;
    font-size: 25px;
+   padding: 0 50px;
+   margin-bottom: 250px;
 }
 .pump-box{
    display: flex;
-   flex-direction: column;
+   justify-content: space-around;
+   /*width: 250px;*/
+   width: 30%;
 }
-.pump-box #pump-button,#deflat-button{
+.pump-box #pump-button,#deflate-button{
    height: 45px;
    padding: 0 20px;
    border-radius: 5px;
@@ -36,13 +42,21 @@ body {
    color: white;
    font-size: 20px;
    border: none;
-   margin-bottom: 20px;
+   /*margin: 0 10px;*/
+   cursor: pointer;
    transition: background-color 0.5s ease-in;
 }
-#pump-button:hover{
+#pump-button,#deflate:hover{
    background-color:#eb5426;
 }
-
+#deflate-button{
+   background-color: #a08610;
+}
+.balloon-box{
+   display: flex;
+   justify-content: center;
+   width: 70%;
+}
 #balloon{
    display: flex;
    width: 100px;
@@ -50,14 +64,9 @@ body {
    border-radius: 50%;
    background-color: red;
    color: white;
-   transform: scaleX(1);
+   transform: scale(1);
    transition: transform 1s ease;
 }
 #balloon p{
    margin: auto;
-}
-
-.blowup{
-   transform-origin: bottom left;
-   transform: scale(2);
 }
